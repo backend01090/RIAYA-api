@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA hero banner</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="420" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 348 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V420 M1208 0 V420" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <rect x="70" y="118" width="1140" height="236" rx="18" fill="url(#panel)" stroke="#1c4b5b"/>
+    <text x="112" y="184" fill="#ffffff" font-size="64" font-weight="900">RIAYA</text>
+    <text x="116" y="222" fill="#b8f4ff" font-size="24" font-weight="700">Medical Complex Management Backend</text>
+    <text x="116" y="258" fill="#d9f7ff" font-size="18" font-weight="600">ASP.NET Core Web API for appointments, visits, prescriptions, billing, payments, roles, and demo data.</text>
+    <g>
+    <rect x="116" y="288" width="194" height="34" rx="8" fill="#0b2533" stroke="#22d3ee" stroke-width="1.2"/>
+    <text x="129" y="310" fill="#f7fdff" font-size="14" font-weight="700">ASP.NET Core Web API</text>
+  </g>
+    <g>
+    <rect x="326" y="288" width="110" height="34" rx="8" fill="#0b2533" stroke="#34d399" stroke-width="1.2"/>
+    <text x="339" y="310" fill="#f7fdff" font-size="14" font-weight="700">JWT + RBAC</text>
+  </g>
+    <g>
+    <rect x="454" y="288" width="194" height="34" rx="8" fill="#0b2533" stroke="#60a5fa" stroke-width="1.2"/>
+    <text x="467" y="310" fill="#f7fdff" font-size="14" font-weight="700">EF Core + SQL Server</text>
+  </g>
+    <g>
+    <rect x="662" y="288" width="92" height="34" rx="8" fill="#0b2533" stroke="#38bdf8" stroke-width="1.2"/>
+    <text x="675" y="310" fill="#f7fdff" font-size="14" font-weight="700">Docker</text>
+  </g>
+    <g>
+    <rect x="760" y="288" width="92" height="34" rx="8" fill="#0b2533" stroke="#a3e635" stroke-width="1.2"/>
+    <text x="773" y="310" fill="#f7fdff" font-size="14" font-weight="700">Swagger</text>
+  </g>
+    <g>
+    <rect x="870" y="288" width="118.4" height="34" rx="8" fill="#0b2533" stroke="#fbbf24" stroke-width="1.2"/>
+    <text x="883" y="310" fill="#f7fdff" font-size="14" font-weight="700">xUnit Tests</text>
+  </g>
+    <g>
+    <rect x="1000" y="288" width="143.60000000000002" height="34" rx="8" fill="#0b2533" stroke="#f472b6" stroke-width="1.2"/>
+    <text x="1013" y="310" fill="#f7fdff" font-size="14" font-weight="700">Demo Seed Data</text>
+  </g>
+    <g transform="translate(780 140)">
+      <rect x="0" y="0" width="340" height="118" rx="14" fill="#071721" stroke="#235366"/>
+      <text x="24" y="38" fill="#ffffff" font-size="19" font-weight="800">Verified backend surface</text>
+      <text x="24" y="68" fill="#bcecf6" font-size="15">Controllers -> Services -> DTOs -> EF Core</text>
+      <text x="24" y="94" fill="#bcecf6" font-size="15">Identity, SQL Server, Swagger, Docker, CI</text>
+    </g>
+  </g>
+
+</svg>

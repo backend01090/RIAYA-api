@@ -1,0 +1,42 @@
+﻿# Build outputs
+[Bb]in/
+[Oo]bj/
+publish/
+TestResults/
+coverage/
+*.trx
+*.coverage
+*.coveragexml
+
+# IDE and user-specific files
+.vs/
+.vscode/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+*.cache
+
+# Logs and diagnostics
+[Ll]ogs/
+*.log
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+repomix-output.xml
+
+# Local dumps / generated snapshots
+riaya-full-code.txt
+riaya-full-dump.txt
+
+# Local backup artifacts
+RIAYA_Clean/
+RIAYA_Clean.zip
+
+bin/
+obj/
+*.zip

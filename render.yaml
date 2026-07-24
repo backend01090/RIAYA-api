@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: riaya-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://+:8080
+      - key: ConnectionStrings__DefaultConnection
+        sync: false
+      - key: Jwt__Key
+        sync: false
+      - key: Jwt__Issuer
+        value: RIAYA
+      - key: Jwt__Audience
+        value: RIAYAUsers
+      - key: Jwt__DurationInMinutes
+        value: "60"
+      - key: Jwt__RefreshTokenDurationInDays
+        value: "7"
+      - key: AdminSeed__Enabled
+        value: "true"
+      - key: AdminSeed__Email
+        sync: false
+      - key: AdminSeed__Password
+        sync: false
+      - key: AdminSeed__FullName
+        value: RIAYA Admin
+      - key: DemoSeed__Enabled
+        value: "false"

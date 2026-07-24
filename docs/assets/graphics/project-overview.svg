@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA project overview</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <rect x="420" y="250" width="440" height="155" rx="14" fill="#102a38" stroke="#32e6c7" stroke-width="2"/>
+    <text x="474" y="308" fill="#ffffff" font-size="28" font-weight="900">Medical Complex Operations</text>
+    <text x="492" y="345" fill="#bdeefa" font-size="17" font-weight="600">API surface for clinical, scheduling, and billing workflows</text>
+    <g>
+    <rect x="70" y="135" width="270" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="135" width="270" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="90" y="169" fill="#ffffff" font-size="18" font-weight="800">Users / Roles</text>
+    <text x="90" y="193" fill="#c6d8e1" font-size="14" font-weight="500">Admin, Doctor, Receptionist</text>
+<text x="90" y="215" fill="#c6d8e1" font-size="14" font-weight="500">Identity users and role claims</text>
+  </g>
+    <g>
+    <rect x="505" y="130" width="270" height="100" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="505" y="130" width="270" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="525" y="164" fill="#ffffff" font-size="18" font-weight="800">Appointments</text>
+    <text x="525" y="188" fill="#c6d8e1" font-size="14" font-weight="500">DurationMinutes, status changes</text>
+<text x="525" y="210" fill="#c6d8e1" font-size="14" font-weight="500">doctor/patient/room conflict checks</text>
+  </g>
+    <g>
+    <rect x="940" y="135" width="270" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="940" y="135" width="270" height="5" rx="4" fill="#60a5fa" opacity="0.9"/>
+    <text x="960" y="169" fill="#ffffff" font-size="18" font-weight="800">Visits &amp; Prescriptions</text>
+    <text x="960" y="193" fill="#c6d8e1" font-size="14" font-weight="500">Doctor-scoped clinical records</text>
+<text x="960" y="215" fill="#c6d8e1" font-size="14" font-weight="500">Receptionist clinical details hidden</text>
+  </g>
+    <g>
+    <rect x="80" y="500" width="270" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="80" y="500" width="270" height="5" rx="4" fill="#fbbf24" opacity="0.9"/>
+    <text x="100" y="534" fill="#ffffff" font-size="18" font-weight="800">Billing &amp; Payments</text>
+    <text x="100" y="558" fill="#c6d8e1" font-size="14" font-weight="500">Invoices, items, payments</text>
+<text x="100" y="580" fill="#c6d8e1" font-size="14" font-weight="500">overpayment and cancel guards</text>
+  </g>
+    <g>
+    <rect x="505" y="500" width="270" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="505" y="500" width="270" height="5" rx="4" fill="#f472b6" opacity="0.9"/>
+    <text x="525" y="534" fill="#ffffff" font-size="18" font-weight="800">Dashboard</text>
+    <text x="525" y="558" fill="#c6d8e1" font-size="14" font-weight="500">Admin overview endpoint</text>
+<text x="525" y="580" fill="#c6d8e1" font-size="14" font-weight="500">recent appointments, visits, prescriptions</text>
+  </g>
+    <g>
+    <rect x="935" y="500" width="275" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="935" y="500" width="275" height="5" rx="4" fill="#a3e635" opacity="0.9"/>
+    <text x="955" y="534" fill="#ffffff" font-size="18" font-weight="800">Demo Seed Data</text>
+    <text x="955" y="558" fill="#c6d8e1" font-size="14" font-weight="500">fictional local dataset</text>
+<text x="955" y="580" fill="#c6d8e1" font-size="14" font-weight="500">idempotent seeding</text>
+  </g>
+    <g>
+    <rect x="940" y="302" width="270" height="100" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="940" y="302" width="270" height="5" rx="4" fill="#38bdf8" opacity="0.9"/>
+    <text x="960" y="336" fill="#ffffff" font-size="18" font-weight="800">API / Swagger</text>
+    <text x="960" y="360" fill="#c6d8e1" font-size="14" font-weight="500">unversioned and /api/v1 routes</text>
+<text x="960" y="382" fill="#c6d8e1" font-size="14" font-weight="500">Postman collection included</text>
+  </g>
+    <path d="M 340 190 L 420 288" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 640 230 L 640 250" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 940 190 L 860 288" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <path d="M 350 555 L 420 365" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 640 500 L 640 405" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 935 555 L 860 365" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 940 352 L 860 330" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+  </g>
+
+</svg>

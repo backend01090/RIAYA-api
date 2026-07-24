@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA demo seed data</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <g>
+    <rect x="70" y="130" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="130" width="250" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="90" y="164" fill="#ffffff" font-size="18" font-weight="800">Seed switch</text>
+    <text x="90" y="188" fill="#c6d8e1" font-size="14" font-weight="500">DemoSeed__Enabled=true</text>
+<text x="90" y="210" fill="#c6d8e1" font-size="14" font-weight="500">fictional local dataset</text>
+<text x="90" y="232" fill="#c6d8e1" font-size="14" font-weight="500">idempotent checks</text>
+  </g>
+    <g>
+    <rect x="365" y="130" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="365" y="130" width="250" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="385" y="164" fill="#ffffff" font-size="18" font-weight="800">Identity</text>
+    <text x="385" y="188" fill="#c6d8e1" font-size="14" font-weight="500">3 roles</text>
+<text x="385" y="210" fill="#c6d8e1" font-size="14" font-weight="500">11 demo users</text>
+<text x="385" y="232" fill="#c6d8e1" font-size="14" font-weight="500">1 admin, 2 receptionists</text>
+  </g>
+    <g>
+    <rect x="660" y="130" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="660" y="130" width="250" height="5" rx="4" fill="#60a5fa" opacity="0.9"/>
+    <text x="680" y="164" fill="#ffffff" font-size="18" font-weight="800">Care team</text>
+    <text x="680" y="188" fill="#c6d8e1" font-size="14" font-weight="500">8 doctors</text>
+<text x="680" y="210" fill="#c6d8e1" font-size="14" font-weight="500">8 specializations</text>
+<text x="680" y="232" fill="#c6d8e1" font-size="14" font-weight="500">8 doctor-room assignments</text>
+  </g>
+    <g>
+    <rect x="955" y="130" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="955" y="130" width="250" height="5" rx="4" fill="#38bdf8" opacity="0.9"/>
+    <text x="975" y="164" fill="#ffffff" font-size="18" font-weight="800">Facility</text>
+    <text x="975" y="188" fill="#c6d8e1" font-size="14" font-weight="500">8 departments</text>
+<text x="975" y="210" fill="#c6d8e1" font-size="14" font-weight="500">8 clinic rooms</text>
+  </g>
+    <g>
+    <rect x="70" y="315" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="315" width="250" height="5" rx="4" fill="#a3e635" opacity="0.9"/>
+    <text x="90" y="349" fill="#ffffff" font-size="18" font-weight="800">Patients</text>
+    <text x="90" y="373" fill="#c6d8e1" font-size="14" font-weight="500">35 fictional patients</text>
+<text x="90" y="395" fill="#c6d8e1" font-size="14" font-weight="500">local demo phone range</text>
+  </g>
+    <g>
+    <rect x="365" y="315" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="365" y="315" width="250" height="5" rx="4" fill="#fbbf24" opacity="0.9"/>
+    <text x="385" y="349" fill="#ffffff" font-size="18" font-weight="800">Scheduling</text>
+    <text x="385" y="373" fill="#c6d8e1" font-size="14" font-weight="500">70 appointments</text>
+<text x="385" y="395" fill="#c6d8e1" font-size="14" font-weight="500">completed, confirmed, pending</text>
+<text x="385" y="417" fill="#c6d8e1" font-size="14" font-weight="500">cancelled and no-show states</text>
+  </g>
+    <g>
+    <rect x="660" y="315" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="660" y="315" width="250" height="5" rx="4" fill="#f472b6" opacity="0.9"/>
+    <text x="680" y="349" fill="#ffffff" font-size="18" font-weight="800">Clinical</text>
+    <text x="680" y="373" fill="#c6d8e1" font-size="14" font-weight="500">24 visits</text>
+<text x="680" y="395" fill="#c6d8e1" font-size="14" font-weight="500">20 prescriptions</text>
+<text x="680" y="417" fill="#c6d8e1" font-size="14" font-weight="500">fictional notes only</text>
+  </g>
+    <g>
+    <rect x="955" y="315" width="250" height="110" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="955" y="315" width="250" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="975" y="349" fill="#ffffff" font-size="18" font-weight="800">Billing</text>
+    <text x="975" y="373" fill="#c6d8e1" font-size="14" font-weight="500">12 medical services</text>
+<text x="975" y="395" fill="#c6d8e1" font-size="14" font-weight="500">36 invoices</text>
+<text x="975" y="417" fill="#c6d8e1" font-size="14" font-weight="500">24 payments</text>
+  </g>
+    <rect x="110" y="535" width="1060" height="82" rx="12" fill="#102a38" stroke="#1e5365"/>
+    <text x="145" y="568" fill="#ffffff" font-size="18" font-weight="900">Integrity encoded in seed</text>
+    <text x="145" y="596" fill="#bdeefa" font-size="15" font-weight="600">Appointments respect overlap rules and room assignments; invoices recalculate totals/statuses and never seed overpayments or payments on cancelled invoices.</text>
+  </g>
+
+</svg>

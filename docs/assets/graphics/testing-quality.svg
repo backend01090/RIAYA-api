@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA testing and quality</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <rect x="430" y="170" width="420" height="150" rx="16" fill="#102a38" stroke="#32e6c7" stroke-width="2"/>
+    <text x="505" y="230" fill="#ffffff" font-size="34" font-weight="900">81 Passing Tests</text>
+    <text x="514" y="270" fill="#bdeefa" font-size="18" font-weight="700">xUnit on .NET 10, Release configuration</text>
+    <g>
+    <rect x="70" y="120" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="120" width="250" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="90" y="154" fill="#ffffff" font-size="18" font-weight="800">Auth tests</text>
+    <text x="90" y="178" fill="#c6d8e1" font-size="14" font-weight="500">login, refresh, revoke, register</text>
+  </g>
+    <g>
+    <rect x="70" y="250" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="250" width="250" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="90" y="284" fill="#ffffff" font-size="18" font-weight="800">Authorization metadata</text>
+    <text x="90" y="308" fill="#c6d8e1" font-size="14" font-weight="500">policy attributes verified</text>
+  </g>
+    <g>
+    <rect x="70" y="380" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="380" width="250" height="5" rx="4" fill="#60a5fa" opacity="0.9"/>
+    <text x="90" y="414" fill="#ffffff" font-size="18" font-weight="800">API smoke tests</text>
+    <text x="90" y="438" fill="#c6d8e1" font-size="14" font-weight="500">health and protected endpoints</text>
+  </g>
+    <g>
+    <rect x="960" y="120" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="960" y="120" width="250" height="5" rx="4" fill="#fbbf24" opacity="0.9"/>
+    <text x="980" y="154" fill="#ffffff" font-size="18" font-weight="800">Appointment workflow</text>
+    <text x="980" y="178" fill="#c6d8e1" font-size="14" font-weight="500">confirm, check-in, no-show</text>
+  </g>
+    <g>
+    <rect x="960" y="250" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="960" y="250" width="250" height="5" rx="4" fill="#f472b6" opacity="0.9"/>
+    <text x="980" y="284" fill="#ffffff" font-size="18" font-weight="800">Overlap tests</text>
+    <text x="980" y="308" fill="#c6d8e1" font-size="14" font-weight="500">doctor, patient, room conflicts</text>
+  </g>
+    <g>
+    <rect x="960" y="380" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="960" y="380" width="250" height="5" rx="4" fill="#38bdf8" opacity="0.9"/>
+    <text x="980" y="414" fill="#ffffff" font-size="18" font-weight="800">Medical complex tests</text>
+    <text x="980" y="438" fill="#c6d8e1" font-size="14" font-weight="500">departments, rooms, assignments</text>
+  </g>
+    <g>
+    <rect x="250" y="520" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="250" y="520" width="250" height="5" rx="4" fill="#f472b6" opacity="0.9"/>
+    <text x="270" y="554" fill="#ffffff" font-size="18" font-weight="800">Patient privacy tests</text>
+    <text x="270" y="578" fill="#c6d8e1" font-size="14" font-weight="500">clinical data restrictions</text>
+  </g>
+    <g>
+    <rect x="515" y="520" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="515" y="520" width="250" height="5" rx="4" fill="#fbbf24" opacity="0.9"/>
+    <text x="535" y="554" fill="#ffffff" font-size="18" font-weight="800">Billing tests</text>
+    <text x="535" y="578" fill="#c6d8e1" font-size="14" font-weight="500">invoice/payment integrity</text>
+  </g>
+    <g>
+    <rect x="780" y="520" width="250" height="92" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="780" y="520" width="250" height="5" rx="4" fill="#a3e635" opacity="0.9"/>
+    <text x="800" y="554" fill="#ffffff" font-size="18" font-weight="800">Demo seed tests</text>
+    <text x="800" y="578" fill="#c6d8e1" font-size="14" font-weight="500">counts, idempotency, integrity</text>
+  </g>
+    <path d="M 320 166 L 430 230" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 320 296 L 430 250" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 320 426 L 430 275" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <path d="M 850 230 L 960 166" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 850 250 L 960 296" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 850 275 L 960 426" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+  </g>
+
+</svg>

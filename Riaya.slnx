@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Riaya.Api/Riaya.Api.csproj" />
+  <Project Path="Riaya.Tests/Riaya.Tests.csproj" />
+</Solution>

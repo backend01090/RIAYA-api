@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA architecture overview</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <g>
+    <rect x="70" y="130" width="230" height="118" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="130" width="230" height="5" rx="4" fill="#38bdf8" opacity="0.9"/>
+    <text x="90" y="164" fill="#ffffff" font-size="18" font-weight="800">Clients</text>
+    <text x="90" y="188" fill="#c6d8e1" font-size="14" font-weight="500">Swagger UI</text>
+<text x="90" y="210" fill="#c6d8e1" font-size="14" font-weight="500">Postman collection</text>
+<text x="90" y="232" fill="#c6d8e1" font-size="14" font-weight="500">HTTP API consumers</text>
+  </g>
+    <g>
+    <rect x="360" y="130" width="560" height="118" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="360" y="130" width="560" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="380" y="164" fill="#ffffff" font-size="18" font-weight="800">ASP.NET Core Web API</text>
+    <text x="380" y="188" fill="#c6d8e1" font-size="14" font-weight="500">Program.cs configures controllers, Swagger, Identity, JWT, health checks, rate limiting, Serilog</text>
+  </g>
+    <g>
+    <rect x="980" y="130" width="230" height="118" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="980" y="130" width="230" height="5" rx="4" fill="#60a5fa" opacity="0.9"/>
+    <text x="1000" y="164" fill="#ffffff" font-size="18" font-weight="800">Local Runtime</text>
+    <text x="1000" y="188" fill="#c6d8e1" font-size="14" font-weight="500">Dockerfile</text>
+<text x="1000" y="210" fill="#c6d8e1" font-size="14" font-weight="500">docker-compose.yml</text>
+<text x="1000" y="232" fill="#c6d8e1" font-size="14" font-weight="500">SQL Server container</text>
+  </g>
+    <path d="M 300 190 L 360 190" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 920 190 L 980 190" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <g>
+    <rect x="120" y="310" width="250" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="120" y="310" width="250" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="140" y="344" fill="#ffffff" font-size="18" font-weight="800">Middleware</text>
+    <text x="140" y="368" fill="#c6d8e1" font-size="14" font-weight="500">global exception handler</text>
+<text x="140" y="390" fill="#c6d8e1" font-size="14" font-weight="500">authentication/authorization</text>
+<text x="140" y="412" fill="#c6d8e1" font-size="14" font-weight="500">rate limiting, response cache</text>
+  </g>
+    <g>
+    <rect x="430" y="310" width="250" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="430" y="310" width="250" height="5" rx="4" fill="#f472b6" opacity="0.9"/>
+    <text x="450" y="344" fill="#ffffff" font-size="18" font-weight="800">Controllers</text>
+    <text x="450" y="368" fill="#c6d8e1" font-size="14" font-weight="500">route groups</text>
+<text x="450" y="390" fill="#c6d8e1" font-size="14" font-weight="500">RBAC attributes</text>
+<text x="450" y="412" fill="#c6d8e1" font-size="14" font-weight="500">API response mapping</text>
+  </g>
+    <g>
+    <rect x="740" y="310" width="250" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="740" y="310" width="250" height="5" rx="4" fill="#fbbf24" opacity="0.9"/>
+    <text x="760" y="344" fill="#ffffff" font-size="18" font-weight="800">Services</text>
+    <text x="760" y="368" fill="#c6d8e1" font-size="14" font-weight="500">business rules</text>
+<text x="760" y="390" fill="#c6d8e1" font-size="14" font-weight="500">doctor scope</text>
+<text x="760" y="412" fill="#c6d8e1" font-size="14" font-weight="500">billing integrity</text>
+  </g>
+    <path d="M 370 368 L 430 368" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 680 368 L 740 368" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <g>
+    <rect x="120" y="505" width="250" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="120" y="505" width="250" height="5" rx="4" fill="#a3e635" opacity="0.9"/>
+    <text x="140" y="539" fill="#ffffff" font-size="18" font-weight="800">DTOs</text>
+    <text x="140" y="563" fill="#c6d8e1" font-size="14" font-weight="500">request validation</text>
+<text x="140" y="585" fill="#c6d8e1" font-size="14" font-weight="500">response shaping</text>
+<text x="140" y="607" fill="#c6d8e1" font-size="14" font-weight="500">privacy-aware projections</text>
+  </g>
+    <g>
+    <rect x="430" y="505" width="250" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="430" y="505" width="250" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="450" y="539" fill="#ffffff" font-size="18" font-weight="800">EF Core DbContext</text>
+    <text x="450" y="563" fill="#c6d8e1" font-size="14" font-weight="500">entities, indexes, filters</text>
+<text x="450" y="585" fill="#c6d8e1" font-size="14" font-weight="500">decimal precision, soft delete</text>
+  </g>
+    <g>
+    <rect x="740" y="505" width="250" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="740" y="505" width="250" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="760" y="539" fill="#ffffff" font-size="18" font-weight="800">ASP.NET Identity</text>
+    <text x="760" y="563" fill="#c6d8e1" font-size="14" font-weight="500">users, roles, lockout</text>
+<text x="760" y="585" fill="#c6d8e1" font-size="14" font-weight="500">refresh token hash fields</text>
+  </g>
+    <g>
+    <rect x="1020" y="505" width="190" height="116" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="1020" y="505" width="190" height="5" rx="4" fill="#60a5fa" opacity="0.9"/>
+    <text x="1040" y="539" fill="#ffffff" font-size="18" font-weight="800">Quality</text>
+    <text x="1040" y="563" fill="#c6d8e1" font-size="14" font-weight="500">xUnit tests</text>
+<text x="1040" y="585" fill="#c6d8e1" font-size="14" font-weight="500">GitHub Actions CI</text>
+  </g>
+    <path d="M 740 426 L 555 505" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 680 563 L 740 563" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 990 563 L 1020 563" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <rect x="435" y="650" width="245" height="38" rx="8" fill="#0d2230" stroke="#235366"/>
+    <text x="464" y="674" fill="#dffaff" font-size="15" font-weight="800">SQL Server persistence</text>
+  </g>
+
+</svg>

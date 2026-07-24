@@ -1,0 +1,39 @@
+services:
+  riaya-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: riaya-api
+    ports:
+      - "5173:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__DefaultConnection: Host=riaya-postgres;Port=5432;Database=RiayaDb;Username=postgres;Password=${POSTGRES_PASSWORD}
+      Jwt__Key: ${JWT_KEY}
+      Jwt__Issuer: RIAYA
+      Jwt__Audience: RIAYA
+      Jwt__DurationInMinutes: 60
+      Jwt__RefreshTokenDurationInDays: 7
+      AdminSeed__Enabled: "true"
+      AdminSeed__Email: ${ADMIN_EMAIL}
+      AdminSeed__Password: ${ADMIN_PASSWORD}
+      AdminSeed__FullName: ${ADMIN_FULL_NAME:-RIAYA Admin}
+      DemoSeed__Enabled: ${DEMO_SEED_ENABLED:-true}
+    depends_on:
+      riaya-postgres:
+        condition: service_healthy
+
+  riaya-postgres:
+    image: postgres:16-alpine
+    container_name: riaya-postgres
+    environment:
+      POSTGRES_DB: RiayaDb
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "54320:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 10

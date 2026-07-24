@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>5c446ce2-56a1-41d2-bd4e-19bca9c2ddb0</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Riaya.Tests\**" />
+    <Content Remove="Riaya.Tests\**" />
+    <EmbeddedResource Remove="Riaya.Tests\**" />
+    <None Remove="Riaya.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\Seed\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="DTOs\Appointment\" />
+    <Folder Include="DTOs\Auth\" />
+    <Folder Include="DTOs\Common\" />
+    <Folder Include="DTOs\Dashboard\" />
+    <Folder Include="DTOs\DoctorSchedule\" />
+    <Folder Include="DTOs\Doctor\" />
+    <Folder Include="DTOs\Patient\" />
+    <Folder Include="DTOs\Prescription\" />
+    <Folder Include="DTOs\Specialization\" />
+    <Folder Include="DTOs\Visit\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Enums\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.8" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.8">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog.AspNetCore" Version="9.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+</Project>
+
+

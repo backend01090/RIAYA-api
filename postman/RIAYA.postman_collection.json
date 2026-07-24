@@ -1,0 +1,387 @@
+{
+  "info": {
+    "name": "RIAYA API",
+    "description": "Local development collection for RIAYA Medical Complex Management Backend. Uses collection variables only; no real tokens are stored in this file.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5173"
+    },
+    {
+      "key": "accessToken",
+      "value": ""
+    },
+    {
+      "key": "refreshToken",
+      "value": ""
+    },
+    {
+      "key": "userId",
+      "value": ""
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{accessToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "auth": {
+          "type": "noauth"
+        },
+        "url": "{{baseUrl}}/health"
+      }
+    },
+    {
+      "name": "Auth - Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "if (json && json.data && json.data.token) {",
+              "  pm.collectionVariables.set('accessToken', json.data.token);",
+              "  pm.collectionVariables.set('refreshToken', json.data.refreshToken || '');",
+              "  pm.collectionVariables.set('userId', json.data.userId || '');",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "auth": {
+          "type": "noauth"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"admin@riaya.local\",\n  \"password\": \"Admin@12345\"\n}"
+        },
+        "url": "{{baseUrl}}/api/auth/login"
+      }
+    },
+    {
+      "name": "Auth - Refresh Token",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "const json = pm.response.json();",
+              "if (json && json.data && json.data.token) {",
+              "  pm.collectionVariables.set('accessToken', json.data.token);",
+              "  pm.collectionVariables.set('refreshToken', json.data.refreshToken || '');",
+              "}"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "auth": {
+          "type": "noauth"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"refreshToken\": \"{{refreshToken}}\"\n}"
+        },
+        "url": "{{baseUrl}}/api/auth/refresh"
+      }
+    },
+    {
+      "name": "Dashboard - Overview",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/dashboard/overview"
+      }
+    },
+    {
+      "name": "Doctors - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/doctors"
+      }
+    },
+    {
+      "name": "Specializations - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/specializations"
+      }
+    },
+    {
+      "name": "Doctor Schedules - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/doctorschedules"
+      }
+    },
+    {
+      "name": "Patients - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/patients"
+      }
+    },
+    {
+      "name": "Appointments - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/appointments"
+      }
+    },
+    {
+      "name": "Appointments - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doctorId\": 1,\n  \"patientId\": 1,\n  \"clinicRoomId\": 1,\n  \"appointmentDate\": \"2026-07-06T09:00:00\",\n  \"durationMinutes\": 30\n}"
+        },
+        "url": "{{baseUrl}}/api/appointments"
+      }
+    },
+    {
+      "name": "Appointments - Check In",
+      "request": {
+        "method": "PATCH",
+        "url": "{{baseUrl}}/api/appointments/1/check-in"
+      }
+    },
+    {
+      "name": "Appointments - Confirm",
+      "request": {
+        "method": "PATCH",
+        "url": "{{baseUrl}}/api/appointments/1/confirm"
+      }
+    },
+    {
+      "name": "Appointments - Cancel",
+      "request": {
+        "method": "PATCH",
+        "url": "{{baseUrl}}/api/appointments/1/cancel"
+      }
+    },
+    {
+      "name": "Appointments - No Show",
+      "request": {
+        "method": "PATCH",
+        "url": "{{baseUrl}}/api/appointments/1/no-show"
+      }
+    },
+    {
+      "name": "Visits - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/visits"
+      }
+    },
+    {
+      "name": "Prescriptions - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/prescriptions"
+      }
+    },
+    {
+      "name": "Departments - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/departments"
+      }
+    },
+    {
+      "name": "Departments - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Cardiology\",\n  \"description\": \"Heart care clinics\",\n  \"isActive\": true\n}"
+        },
+        "url": "{{baseUrl}}/api/departments"
+      }
+    },
+    {
+      "name": "Clinic Rooms - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/clinicrooms"
+      }
+    },
+    {
+      "name": "Clinic Rooms - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Cardiology Room 1\",\n  \"roomNumber\": \"C-101\",\n  \"departmentId\": 1,\n  \"isActive\": true\n}"
+        },
+        "url": "{{baseUrl}}/api/clinicrooms"
+      }
+    },
+    {
+      "name": "Doctor Clinic Assignments - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/doctorclinicassignments"
+      }
+    },
+    {
+      "name": "Doctor Clinic Assignments - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"doctorId\": 1,\n  \"clinicRoomId\": 1,\n  \"isPrimary\": true,\n  \"activeFrom\": \"2026-01-01T00:00:00\"\n}"
+        },
+        "url": "{{baseUrl}}/api/doctorclinicassignments"
+      }
+    },
+    {
+      "name": "Medical Services - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/medicalservices"
+      }
+    },
+    {
+      "name": "Medical Services - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"General Consultation\",\n  \"price\": 25.00,\n  \"isActive\": true\n}"
+        },
+        "url": "{{baseUrl}}/api/medicalservices"
+      }
+    },
+    {
+      "name": "Invoices - List",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/invoices"
+      }
+    },
+    {
+      "name": "Invoices - Create",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"patientId\": 1,\n  \"appointmentId\": 1,\n  \"items\": [\n    {\n      \"medicalServiceId\": 1,\n      \"quantity\": 1\n    }\n  ]\n}"
+        },
+        "url": "{{baseUrl}}/api/invoices"
+      }
+    },
+    {
+      "name": "Invoices - Add Item",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"description\": \"Lab test\",\n  \"quantity\": 1,\n  \"unitPrice\": 15.00\n}"
+        },
+        "url": "{{baseUrl}}/api/invoices/1/items"
+      }
+    },
+    {
+      "name": "Invoices - Cancel",
+      "request": {
+        "method": "PATCH",
+        "url": "{{baseUrl}}/api/invoices/1/cancel"
+      }
+    },
+    {
+      "name": "Payments - By Invoice",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/payments/invoice/1"
+      }
+    },
+    {
+      "name": "Payments - Record",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"invoiceId\": 1,\n  \"amount\": 25.00,\n  \"method\": \"Cash\",\n  \"notes\": \"Demo local cash payment\"\n}"
+        },
+        "url": "{{baseUrl}}/api/payments"
+      }
+    }
+  ]
+}

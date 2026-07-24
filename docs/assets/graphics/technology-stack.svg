@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA technology stack</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <text x="82" y="132" fill="#ffffff" font-size="20" font-weight="800">Verified from project files, Dockerfile, CI, and Program.cs</text>
+    <g>
+    <rect x="80" y="175" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="201" r="5" fill="#22d3ee"/>
+    <text x="114" y="206" fill="#eafcff" font-size="14" font-weight="700">.NET 10</text>
+  </g>
+    <g>
+    <rect x="370" y="175" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="201" r="5" fill="#34d399"/>
+    <text x="404" y="206" fill="#eafcff" font-size="14" font-weight="700">ASP.NET Core Web API</text>
+  </g>
+    <g>
+    <rect x="660" y="175" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="201" r="5" fill="#60a5fa"/>
+    <text x="694" y="206" fill="#eafcff" font-size="14" font-weight="700">Entity Framework Core</text>
+  </g>
+    <g>
+    <rect x="950" y="175" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="201" r="5" fill="#38bdf8"/>
+    <text x="984" y="206" fill="#eafcff" font-size="14" font-weight="700">SQL Server</text>
+  </g>
+    <g>
+    <rect x="80" y="265" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="291" r="5" fill="#f472b6"/>
+    <text x="114" y="296" fill="#eafcff" font-size="14" font-weight="700">ASP.NET Core Identity</text>
+  </g>
+    <g>
+    <rect x="370" y="265" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="291" r="5" fill="#fbbf24"/>
+    <text x="404" y="296" fill="#eafcff" font-size="14" font-weight="700">JWT + Refresh Tokens</text>
+  </g>
+    <g>
+    <rect x="660" y="265" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="291" r="5" fill="#a3e635"/>
+    <text x="694" y="296" fill="#eafcff" font-size="14" font-weight="700">Swagger / OpenAPI</text>
+  </g>
+    <g>
+    <rect x="950" y="265" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="291" r="5" fill="#34d399"/>
+    <text x="984" y="296" fill="#eafcff" font-size="14" font-weight="700">Serilog</text>
+  </g>
+    <g>
+    <rect x="80" y="355" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="381" r="5" fill="#38bdf8"/>
+    <text x="114" y="386" fill="#eafcff" font-size="14" font-weight="700">Dockerfile</text>
+  </g>
+    <g>
+    <rect x="370" y="355" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="381" r="5" fill="#22d3ee"/>
+    <text x="404" y="386" fill="#eafcff" font-size="14" font-weight="700">Docker Compose</text>
+  </g>
+    <g>
+    <rect x="660" y="355" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="381" r="5" fill="#fbbf24"/>
+    <text x="694" y="386" fill="#eafcff" font-size="14" font-weight="700">xUnit</text>
+  </g>
+    <g>
+    <rect x="950" y="355" width="250" height="52" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="381" r="5" fill="#60a5fa"/>
+    <text x="984" y="386" fill="#eafcff" font-size="14" font-weight="700">GitHub Actions CI</text>
+  </g>
+    <g>
+    <rect x="150" y="495" width="980" height="95" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="150" y="495" width="980" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="170" y="529" fill="#ffffff" font-size="18" font-weight="800">Runtime boundaries</text>
+    <text x="170" y="553" fill="#c6d8e1" font-size="14" font-weight="500">API container exposes 8080 internally; compose maps host 5173 to container 8080.</text>
+<text x="170" y="575" fill="#c6d8e1" font-size="14" font-weight="500">CI restores, builds, and tests Riaya.slnx on windows-latest with dotnet 10.0.x.</text>
+  </g>
+  </g>
+
+</svg>

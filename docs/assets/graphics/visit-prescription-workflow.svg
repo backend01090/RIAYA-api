@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA visit and prescription workflow</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <g>
+    <rect x="70" y="140" width="235" height="100" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="70" y="140" width="235" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="90" y="174" fill="#ffffff" font-size="18" font-weight="800">Doctor scoped access</text>
+    <text x="90" y="198" fill="#c6d8e1" font-size="14" font-weight="500">current doctor profile</text>
+<text x="90" y="220" fill="#c6d8e1" font-size="14" font-weight="500">other doctors blocked</text>
+  </g>
+    <g>
+    <rect x="350" y="140" width="235" height="100" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="350" y="140" width="235" height="5" rx="4" fill="#34d399" opacity="0.9"/>
+    <text x="370" y="174" fill="#ffffff" font-size="18" font-weight="800">Appointment eligibility</text>
+    <text x="370" y="198" fill="#c6d8e1" font-size="14" font-weight="500">not pending/cancelled/no-show</text>
+<text x="370" y="220" fill="#c6d8e1" font-size="14" font-weight="500">not future, visit unique</text>
+  </g>
+    <g>
+    <rect x="630" y="140" width="235" height="100" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="630" y="140" width="235" height="5" rx="4" fill="#60a5fa" opacity="0.9"/>
+    <text x="650" y="174" fill="#ffffff" font-size="18" font-weight="800">Visit creation</text>
+    <text x="650" y="198" fill="#c6d8e1" font-size="14" font-weight="500">symptoms</text>
+<text x="650" y="220" fill="#c6d8e1" font-size="14" font-weight="500">diagnosis</text>
+<text x="650" y="242" fill="#c6d8e1" font-size="14" font-weight="500">notes</text>
+  </g>
+    <g>
+    <rect x="910" y="140" width="235" height="100" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="910" y="140" width="235" height="5" rx="4" fill="#a3e635" opacity="0.9"/>
+    <text x="930" y="174" fill="#ffffff" font-size="18" font-weight="800">Appointment completed</text>
+    <text x="930" y="198" fill="#c6d8e1" font-size="14" font-weight="500">visit creation completes</text>
+<text x="930" y="220" fill="#c6d8e1" font-size="14" font-weight="500">delete blocked when completed</text>
+  </g>
+    <path d="M 305 190 L 350 190" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 585 190 L 630 190" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 865 190 L 910 190" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <g>
+    <rect x="235" y="340" width="260" height="115" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="235" y="340" width="260" height="5" rx="4" fill="#fbbf24" opacity="0.9"/>
+    <text x="255" y="374" fill="#ffffff" font-size="18" font-weight="800">Prescription creation</text>
+    <text x="255" y="398" fill="#c6d8e1" font-size="14" font-weight="500">visit id required</text>
+<text x="255" y="420" fill="#c6d8e1" font-size="14" font-weight="500">medication, dosage, instructions</text>
+<text x="255" y="442" fill="#c6d8e1" font-size="14" font-weight="500">duration in days</text>
+  </g>
+    <g>
+    <rect x="550" y="340" width="260" height="115" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="550" y="340" width="260" height="5" rx="4" fill="#22d3ee" opacity="0.9"/>
+    <text x="570" y="374" fill="#ffffff" font-size="18" font-weight="800">Doctor scope enforced</text>
+    <text x="570" y="398" fill="#c6d8e1" font-size="14" font-weight="500">create/update/delete checks</text>
+<text x="570" y="420" fill="#c6d8e1" font-size="14" font-weight="500">DoctorPrescriptionMismatch</text>
+  </g>
+    <g>
+    <rect x="865" y="340" width="270" height="115" rx="10" fill="#0c1d29" stroke="#1f4254" stroke-width="1.2"/>
+    <rect x="865" y="340" width="270" height="5" rx="4" fill="#f472b6" opacity="0.9"/>
+    <text x="885" y="374" fill="#ffffff" font-size="18" font-weight="800">Clinical privacy</text>
+    <text x="885" y="398" fill="#c6d8e1" font-size="14" font-weight="500">Receptionist fields blank</text>
+<text x="885" y="420" fill="#c6d8e1" font-size="14" font-weight="500">clinical search side channel blocked</text>
+  </g>
+    <path d="M 745 240 L 365 340" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 495 397 L 550 397" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/> <path d="M 810 397 L 865 397" stroke="#32e6c7" stroke-width="2.2" fill="none" marker-end="url(#arrow)" opacity="0.9"/>
+    <rect x="100" y="545" width="1080" height="72" rx="10" fill="#102a38" stroke="#1e5263"/>
+    <text x="132" y="575" fill="#ffffff" font-size="18" font-weight="800">Verified clinical boundary</text>
+    <text x="132" y="603" fill="#bdeefa" font-size="15" font-weight="600">Admins and doctors can read clinical projections. Receptionists receive operational patient data without symptoms, diagnosis, notes, medication, dosage, or instructions.</text>
+  </g>
+
+</svg>

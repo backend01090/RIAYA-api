@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+  <title id="title">RIAYA business modules</title>
+  <desc id="desc">Medical Complex Management Backend</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06141f"/>
+      <stop offset="0.48" stop-color="#0b1f2a"/>
+      <stop offset="1" stop-color="#102c36"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e2534"/>
+      <stop offset="1" stop-color="#0a1a26"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#32e6c7"/>
+    </marker>
+    <filter id="soft" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <path d="M0 94 H1280 M0 648 H1280" stroke="#143849" stroke-width="1" opacity="0.75"/>
+  <path d="M72 0 V720 M1208 0 V720" stroke="#0f3544" stroke-width="1" opacity="0.35"/>
+  <g transform="translate(42 33)">
+    <rect x="0" y="0" width="48" height="48" rx="10" fill="#0d2b39" stroke="#32e6c7" stroke-width="2"/>
+    <path d="M24 11 V37 M11 24 H37" stroke="#32e6c7" stroke-width="5" stroke-linecap="round"/>
+    <text x="66" y="22" fill="#ffffff" font-size="22" font-weight="900">RIAYA</text>
+    <text x="66" y="45" fill="#9eddea" font-size="13" font-weight="600">Medical Complex Management Backend</text>
+  </g>
+  
+  <g filter="url(#soft)">
+    <text x="82" y="130" fill="#ffffff" font-size="20" font-weight="800">Modules extracted from controllers and services</text>
+    <g>
+    <rect x="80" y="170" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="194" r="5" fill="#34d399"/>
+    <text x="114" y="199" fill="#eafcff" font-size="14" font-weight="700">Auth &amp; Roles</text>
+  </g>
+    <g>
+    <rect x="370" y="170" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="194" r="5" fill="#f472b6"/>
+    <text x="404" y="199" fill="#eafcff" font-size="14" font-weight="700">Dashboard</text>
+  </g>
+    <g>
+    <rect x="660" y="170" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="194" r="5" fill="#22d3ee"/>
+    <text x="694" y="199" fill="#eafcff" font-size="14" font-weight="700">Doctors</text>
+  </g>
+    <g>
+    <rect x="950" y="170" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="194" r="5" fill="#60a5fa"/>
+    <text x="984" y="199" fill="#eafcff" font-size="14" font-weight="700">Specializations</text>
+  </g>
+    <g>
+    <rect x="80" y="250" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="274" r="5" fill="#38bdf8"/>
+    <text x="114" y="279" fill="#eafcff" font-size="14" font-weight="700">Doctor Schedules</text>
+  </g>
+    <g>
+    <rect x="370" y="250" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="274" r="5" fill="#a3e635"/>
+    <text x="404" y="279" fill="#eafcff" font-size="14" font-weight="700">Patients</text>
+  </g>
+    <g>
+    <rect x="660" y="250" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="274" r="5" fill="#22d3ee"/>
+    <text x="694" y="279" fill="#eafcff" font-size="14" font-weight="700">Appointments</text>
+  </g>
+    <g>
+    <rect x="950" y="250" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="274" r="5" fill="#60a5fa"/>
+    <text x="984" y="279" fill="#eafcff" font-size="14" font-weight="700">Visits</text>
+  </g>
+    <g>
+    <rect x="80" y="330" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="354" r="5" fill="#f472b6"/>
+    <text x="114" y="359" fill="#eafcff" font-size="14" font-weight="700">Prescriptions</text>
+  </g>
+    <g>
+    <rect x="370" y="330" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="354" r="5" fill="#34d399"/>
+    <text x="404" y="359" fill="#eafcff" font-size="14" font-weight="700">Departments</text>
+  </g>
+    <g>
+    <rect x="660" y="330" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="354" r="5" fill="#38bdf8"/>
+    <text x="694" y="359" fill="#eafcff" font-size="14" font-weight="700">Clinic Rooms</text>
+  </g>
+    <g>
+    <rect x="950" y="330" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="354" r="5" fill="#fbbf24"/>
+    <text x="984" y="359" fill="#eafcff" font-size="14" font-weight="700">Doctor Clinic Assignments</text>
+  </g>
+    <g>
+    <rect x="80" y="410" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="98" cy="434" r="5" fill="#a3e635"/>
+    <text x="114" y="439" fill="#eafcff" font-size="14" font-weight="700">Medical Services</text>
+  </g>
+    <g>
+    <rect x="370" y="410" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="388" cy="434" r="5" fill="#fbbf24"/>
+    <text x="404" y="439" fill="#eafcff" font-size="14" font-weight="700">Invoices</text>
+  </g>
+    <g>
+    <rect x="660" y="410" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="678" cy="434" r="5" fill="#fbbf24"/>
+    <text x="694" y="439" fill="#eafcff" font-size="14" font-weight="700">Payments</text>
+  </g>
+    <g>
+    <rect x="950" y="410" width="250" height="48" rx="8" fill="#0d2230" stroke="#24485a" stroke-width="1"/>
+    <circle cx="968" cy="434" r="5" fill="#34d399"/>
+    <text x="984" y="439" fill="#eafcff" font-size="14" font-weight="700">Demo Seed Data</text>
+  </g>
+    <rect x="80" y="525" width="1120" height="80" rx="12" fill="#102a38" stroke="#1f5365"/>
+    <text x="112" y="558" fill="#ffffff" font-size="18" font-weight="800">Route style</text>
+    <text x="112" y="585" fill="#bdeefa" font-size="15" font-weight="600">Each controller exposes unversioned /api routes and matching /api/v1 routes where implemented in attributes.</text>
+  </g>
+
+</svg>
