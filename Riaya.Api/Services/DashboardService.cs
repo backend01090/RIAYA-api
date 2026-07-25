@@ -19,7 +19,7 @@ public class DashboardService : IDashboardService
     {
         var today = DateTime.Today;
         var tomorrow = today.AddDays(1);
-        var now = DateTime.Now;
+        var now = DateTime.UtcNow;
 
         var doctorsQuery = _context.Doctors.IgnoreQueryFilters();
         var patientsQuery = _context.Patients.IgnoreQueryFilters();

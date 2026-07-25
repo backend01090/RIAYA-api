@@ -269,7 +269,7 @@ public class AppointmentService : IAppointmentService
         if (appointment.Status != AppointmentStatus.Confirmed)
             return ServiceResult.Fail("Only confirmed appointments can be checked in.", ErrorType.BusinessRule, "InvalidCheckInStatus");
 
-        if (appointment.AppointmentDate.Date > DateTime.Now.Date)
+        if (appointment.AppointmentDate.Date > DateTime.UtcNow.Date)
             return ServiceResult.Fail("Appointment cannot be checked in before its scheduled day.", ErrorType.BusinessRule, "EarlyCheckIn");
 
         appointment.Status = AppointmentStatus.CheckedIn;
@@ -297,7 +297,7 @@ public class AppointmentService : IAppointmentService
         if (appointment.Status == AppointmentStatus.Pending)
             return ServiceResult.Fail("Pending appointment must be confirmed before completion.", ErrorType.BusinessRule, "PendingAppointment");
 
-        if (appointment.AppointmentDate > DateTime.Now)
+        if (appointment.AppointmentDate > DateTime.UtcNow)
             return ServiceResult.Fail("Future appointment cannot be completed.", ErrorType.BusinessRule, "FutureAppointment");
 
         var hasVisit = await _context.Visits.AnyAsync(v => v.AppointmentId == id, cancellationToken);
@@ -323,7 +323,7 @@ public class AppointmentService : IAppointmentService
         if (!accessResult.Success)
             return accessResult;
 
-        if (appointment.AppointmentDate > DateTime.Now)
+        if (appointment.AppointmentDate > DateTime.UtcNow)
             return ServiceResult.Fail("Future appointment cannot be marked as no-show.", ErrorType.BusinessRule, "FutureAppointment");
 
         if (appointment.Status == AppointmentStatus.Completed)
@@ -346,7 +346,7 @@ public class AppointmentService : IAppointmentService
         if (days <= 0)
             days = 7;
 
-        var now = DateTime.Now;
+        var now = DateTime.UtcNow;
         var endDate = now.AddDays(days);
 
         var query = _context.Appointments
@@ -428,7 +428,7 @@ public class AppointmentService : IAppointmentService
 
     private ServiceResult ValidateRequestedSlot(DateTime appointmentDate, int durationMinutes)
     {
-        if (appointmentDate <= DateTime.Now)
+        if (appointmentDate <= DateTime.UtcNow)
             return ServiceResult.Fail("Appointment date must be in the future.", ErrorType.Validation, "AppointmentInPast");
 
         if (appointmentDate.Second != 0 || appointmentDate.Millisecond != 0)

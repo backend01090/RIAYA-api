@@ -104,7 +104,7 @@ public class DoctorScheduleService : IDoctorScheduleService
         if (schedule is null)
             return ServiceResult.Fail("Schedule not found.", ErrorType.NotFound, "ScheduleNotFound");
 
-        var now = DateTime.Now;
+        var now = DateTime.UtcNow;
         var futureAppointmentDates = await _context.Appointments
             .AsNoTracking()
             .Where(a =>
@@ -224,7 +224,7 @@ public class DoctorScheduleService : IDoctorScheduleService
         CreateDoctorScheduleDto dto,
         CancellationToken cancellationToken)
     {
-        var now = DateTime.Now;
+        var now = DateTime.UtcNow;
 
         var futureAppointmentDates = await _context.Appointments
             .AsNoTracking()

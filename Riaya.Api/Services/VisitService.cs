@@ -146,7 +146,7 @@ public class VisitService : IVisitService
         if (appointment.Status == AppointmentStatus.NoShow)
             return ServiceResult<VisitDto>.Fail("Cannot create visit for a no-show appointment.", ErrorType.BusinessRule, "NoShowAppointment");
 
-        if (appointment.AppointmentDate > DateTime.Now)
+        if (appointment.AppointmentDate > DateTime.UtcNow)
             return ServiceResult<VisitDto>.Fail("Cannot create visit before appointment time.", ErrorType.BusinessRule, "FutureAppointment");
 
         var visitExists = await _context.Visits.AnyAsync(v => v.AppointmentId == dto.AppointmentId, cancellationToken);
