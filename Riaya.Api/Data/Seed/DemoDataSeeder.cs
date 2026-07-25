@@ -337,7 +337,7 @@ public static class DemoDataSeeder
                 {
                     FullName = patientSeed.Name,
                     PhoneNumber = patientSeed.Phone,
-                    DateOfBirth = patientSeed.DateOfBirth,
+                    DateOfBirth = DateTime.SpecifyKind(patientSeed.DateOfBirth, DateTimeKind.Utc),
                     Gender = patientSeed.Gender
                 });
             }
@@ -381,7 +381,7 @@ public static class DemoDataSeeder
     {
         var doctors = await GetDemoDoctorsAsync(context);
         var rooms = await context.ClinicRooms.OrderBy(r => r.Id).Take(DoctorCount).ToListAsync();
-        var activeFrom = DateTime.Today.AddYears(-1);
+        var activeFrom = DateTime.SpecifyKind(DateTime.Today.AddYears(-1), DateTimeKind.Utc);
 
         for (var index = 0; index < doctors.Count; index++)
         {
@@ -630,20 +630,21 @@ public static class DemoDataSeeder
     private static List<DateTime> BuildAppointmentDates(int count)
     {
         var dates = new List<DateTime>();
+        var today = DateTime.SpecifyKind(DateTime.Today, DateTimeKind.Utc);
         var anchors = new[]
         {
-            DateTime.Today.AddDays(-35),
-            DateTime.Today.AddDays(-10),
-            DateTime.Today,
-            DateTime.Today.AddDays(7)
+            today.AddDays(-35),
+            today.AddDays(-10),
+            today,
+            today.AddDays(7)
         };
 
         var slotsPerAnchor = (int)Math.Ceiling(count / (double)anchors.Length);
 
         foreach (var anchor in anchors)
         {
-            var businessDay = anchor.Date == DateTime.Today
-                ? DateTime.Today
+            var businessDay = anchor.Date == today
+                ? today
                 : MoveToBusinessDay(anchor);
             for (var slot = 0; slot < slotsPerAnchor && dates.Count < count; slot++)
             {
