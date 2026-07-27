@@ -1,6 +1,7 @@
 ﻿using System.Threading.RateLimiting;
 using System.Text.Json.Serialization;
 using Riaya.Api.Common;
+using Riaya.Api.Converters;
 using Riaya.Api.Data;
 using Riaya.Api.Data.Seed;
 using Riaya.Api.Entities;
@@ -26,6 +27,11 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+        // Clients post ISO-8601 without an offset, which binds as Kind=Unspecified.
+        // Npgsql rejects that for the timestamptz columns, so any handler putting a
+        // request date into a query or a save threw and surfaced as a 500.
+        options.JsonSerializerOptions.Converters.Add(new UtcDateTimeConverter());
+        options.JsonSerializerOptions.Converters.Add(new UtcNullableDateTimeConverter());
     });
 builder.Services.AddApplicationValidationResponse();
 builder.Services.AddApplicationSwagger();
